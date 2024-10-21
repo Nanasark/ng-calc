@@ -1,0 +1,47 @@
+<main>
+  <h1>Calculator Sample</h1>
+  <section>
+    <div class="screen">
+      @if(calculated()){
+        <span class="result">{{ result() }} </span>
+      }
+      @else {<span class="result"> {{ display() }} </span>}
+
+
+
+    </div>
+
+    <div class="calculate">
+      <div class="numbers">
+        <div>
+          <button (click)="addNumber('7')">7</button>
+          <button (click)="addNumber('8')">8</button>
+          <button (click)="addNumber('9')">9</button>
+        </div>
+        <div>
+          <button (click)="addNumber('4')">4</button>
+          <button (click)="addNumber('5')">5</button>
+          <button (click)="addNumber('6')">6</button>
+        </div>
+        <div>
+          <button (click)="addNumber('1')">1</button>
+          <button (click)="addNumber('2')">2</button>
+          <button (click)="addNumber('3')">3</button>
+        </div>
+        <div>
+          <button (click)="addNumber('0')">0</button>
+          <button (click)="addDecimal()">.</button>
+          <button (click)="clearDisplay()">C</button>
+        </div>
+      </div>
+      <div class="functions">
+        <button (click)="divide()">÷</button>
+        <button (click)="multiply()">×</button>
+        <button (click)="subtract()">-</button>
+        <button (click)="add()">+</button>
+        <button (click)="equals()">=</button>
+        <button (click)="deleteChar()">DEL</button>
+      </div>
+    </div>
+  </section>
+</main>
